@@ -2,31 +2,128 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: black;
+}
+h1 {
+  text-align: center;
+  color: white;
+}
+.calculator-body {
+  width: 55%;
+  height: 100%;
+  border: 2px solid black;
+  margin: auto;
+  margin-top: 9px;
+  background-color: black;
+  border-radius: 25px;
 }
 
-#displayBox {
-  margin: 19px 36px;
-  font-size: 28px;
-  width: 75%;
-}
-.calculatorBox {
-    width: 300px;
-    border: 2px solid #5f60a0;
-    border-radius: 12px;
-    margin: auto;
-    margin-top: 23px;
-    background-color: #5f60a0;
-}
-.calculatorBtns {
+.calculator-btn {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
+#display {
+  height: 20vh;
+  width: 54vw;
+  margin-left: 5px;
+  margin-top: 25px;
+  margin-bottom: 2px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 60px;
+  text-align: right;
+  padding-right: 10px;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: gray;
+}
+.btn-blank,
 .btn {
-  width: 75px;
-  height: 70px;
-  text-align: center;
-  font-size: 12px;
-  margin: 4px;
+  width: 11vw;
+  height: 9vh;
+  margin: 14px;
+  font-size: 40px;
+  background-color: transparent;
+  border: none;
+  color: white;
 }
-
+.operator-btn {
+  color: orangered;
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+.operator-btn:hover {
+  background-color: white;
+  color: orangered;
+}
+@media screen and (max-width: 1054px) {
+  .btn-blank,
+  .btn {
+    width: 10vw;
+  }
+}
+@media screen and (max-width: 773px) {
+  .btn-blank,
+  .btn {
+    width: 9vw;
+  }
+}
+@media screen and (max-width: 610px) {
+  .btn-blank,
+  .btn {
+    width: 8vw;
+  }
+}
+@media screen and (max-width: 504px) {
+  .btn-blank,
+  .btn {
+    width: 7vw;
+  }
+}
+@media screen and (max-width: 429px) {
+  .btn-blank,
+  .btn {
+    width: 6vw;
+  }
+}
+@media screen and (max-width: 374px) {
+  .btn-blank,
+  .btn {
+    width: 5vw;
+  }
+}
+@media screen and (max-width: 331px) {
+  .btn-blank,
+  .btn {
+    width: 4vw;
+  }
+}
+@media screen and (max-width: 297px) {
+  .btn-blank,
+  .btn {
+    width: 3vw;
+  }
+}
+@media screen and (max-width: 269px) {
+  .btn-blank,
+  .btn {
+    width: 2vw;
+  }
+}
+@media screen and (max-width: 247px) {
+  .btn-blank,
+  .btn {
+    width: 1vw;
+  }
+}
+@media screen and (max-width: 227px) {
+  .btn-blank,
+  .btn {
+    width: 0vw;
+  }
+}

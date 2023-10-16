@@ -3,127 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
+    <title>Standard Calculator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="calculatorBox">
-      <div class="displayBox">
-        <input type="text" id="displayBox" readonly />
+    <h1>Basic Calculator</h1>
+    <div class="calculator-body">
+      <div class="calculator-display-box">
+        <input type="text" id="display" readonly />
       </div>
-      <div class="calculatorBtns">
+      <div class="line"></div>
+      <div class="calculator-btn">
+        <button class="btn operator-btn" onclick="clear_all()">C</button>
+        <button class="btn operator-btn" onclick="delete_last()">X</button>
         <button
-          class="btn"
-          onclick="currentDisplay = '';
-        document.querySelector('#displayBox').value = currentDisplay;"
+          class="btn operator-btn"
+          onclick="append_value('%'),append_mod()"
         >
-          C
+          %
         </button>
-        <button
-          class="btn"
-          onclick="currentDisplay += '1';
-          document.querySelector('#displayBox').value = currentDisplay;"
-        >
-          1
-        </button>
-        <button
-          class="btn"
-          onclick="currentDisplay += '2';
-          document.querySelector('#displayBox').value = currentDisplay;"
-        >
-          2
-        </button>
-        <button
-          class="btn"
-          onclick="currentDisplay += '+';
-          document.querySelector('#displayBox').value = currentDisplay;"
-        >
-          +
-        </button>
-        <button
-          class="btn"
-          onclick="currentDisplay += '3';
-          document.querySelector('#displayBox').value = currentDisplay;"
-        >
-          3
-        </button>
-        <button
-          class="btn"
-          onclick="currentDisplay += '4';
-          document.querySelector('#displayBox').value = currentDisplay;"
-        >
-          4
-        </button>
-        <button
-          class="btn"
-          onclick="currentDisplay += '-';
-          document.querySelector('#displayBox').value = currentDisplay;"
-        >
-          -
-        </button>
-        <button
-          class="btn"
-          onclick="currentDisplay += '5';
-          document.querySelector('#displayBox').value = currentDisplay;"
-        >
-          5
-        </button>
-        <button
-          class="btn"
-          onclick="currentDisplay += '6';
-          document.querySelector('#displayBox').value = currentDisplay;"
-        >
-          6
-        </button>
-        <button
-          class="btn"
-          onclick="currentDisplay += '*';
-          document.querySelector('#displayBox').value = currentDisplay;"
-        >
-          *
-        </button>
-        <button
-          class="btn"
-          onclick="currentDisplay += '7';
-          document.querySelector('#displayBox').value = currentDisplay;"
-        >
-          7
-        </button>
-        <button
-          class="btn"
-          onclick="currentDisplay += '8';
-          document.querySelector('#displayBox').value = currentDisplay;"
-        >
-          8
-        </button>
-        <button
-          class="btn"
-          onclick="currentDisplay += '/';
-          document.querySelector('#displayBox').value = currentDisplay;"
-        >
-          /
-        </button>
-        <button
-          class="btn"
-          onclick="currentDisplay += '9';
-          document.querySelector('#displayBox').value = currentDisplay;"
-        >
-          9
-        </button>
-        <button
-          class="btn"
-          onclick="currentDisplay += '0';
-          document.querySelector('#displayBox').value = currentDisplay;"
-        >
-          0
-        </button>
-        <button
-          class="btn"
-          onclick="currentDisplay = eval(currentDisplay);
-        document.querySelector('#displayBox').value = currentDisplay"
-        >
-          =
-        </button>
+        <button class="btn operator-btn" onclick="append_value('/')">/</button>
+        <button class="btn" onclick="append_value('7')">7</button>
+        <button class="btn" onclick="append_value('8')">8</button>
+        <button class="btn" onclick="append_value('9')">9</button>
+        <button class="btn operator-btn" onclick="append_value('*')">*</button>
+        <button class="btn" onclick="append_value('4')">4</button>
+        <button class="btn" onclick="append_value('5')">5</button>
+        <button class="btn" onclick="append_value('6')">6</button>
+        <button class="btn operator-btn" onclick="append_value('-')">-</button>
+        <button class="btn" onclick="append_value('1')">1</button>
+        <button class="btn" onclick="append_value('2')">2</button>
+        <button class="btn" onclick="append_value('3')">3</button>
+        <button class="btn operator-btn" onclick="append_value('+')">+</button>
+        <button class="btn-blank"></button>
+        <button class="btn" onclick="append_value('0')">0</button>
+        <button class="btn" onclick="append_value('.')">.</button>
+        <button class="btn operator-btn" onclick="result()">=</button>
       </div>
     </div>
     <script src="script.js"></script>
